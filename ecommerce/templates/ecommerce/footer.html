@@ -88,7 +88,7 @@
 							</div>
 							<div class="w3-address-right">
 								<h6>Phone Number</h6>
-								<p><a href="tel:0421-61737">0421-61737</a></p>
+								<p><a href="tel:{{setting.phone}}">{{setting.phone}}</a></p>
 							</div>
 							<div class="clearfix"> </div>
 						</div>
@@ -98,7 +98,7 @@
 							</div>
 							<div class="w3-address-right">
 								<h6>Email Address</h6>
-								<p>Email :<a href="mailto:support@artfort.com.bd"> support@artfort.com.bd</a></p>
+								<p>Email :<a href="mailto:{{setting.email}}">{{setting.email}}</a></p>
 							</div>
 							<div class="clearfix"> </div>
 						</div>
@@ -108,7 +108,7 @@
 							</div>
 							<div class="w3-address-right">
 								<h6>Location</h6>
-								<a href="{% url 'contact' %}"><p>Dream Alauddin Tower,Jashore.</a>
+								<a href="{% url 'contact' %}"><p>{{setting.address}}</a>
 								
 								</p>
 							</div>
@@ -134,7 +134,7 @@
 
 		<div class="clearfix"></div>
 	</div>
-		<p class="copy-right">&copy ArtFort Fashion Industries Ltd | Design by <a href="http://shohan.artfort.com.bd/">shadat shohan</a></p>
+		<p class="copy-right">&copy ArtFort Fashion Industries Ltd | Design by <a href="https://shohan.artfort.com.bd/">shadat shohan</a></p>
 	</div>
 </div>
 <!-- //footer -->

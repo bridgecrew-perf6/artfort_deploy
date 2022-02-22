@@ -4,7 +4,7 @@
 {% block header %}{% include 'ecommerce/header.html' %}{% endblock %}
 {% block mainbody %}
 <!-- /banner_bottom_agile_info -->
-<div class="page-head_agile_info_w3l">
+<div class="page-head_agile_info_w3l" style="background: url('{{ setting.contactbanner.url }}') no-repeat center">
 		<div class="container">
 			<h3>C<span>ontact Us </span></h3>
  
@@ -18,21 +18,21 @@
 						<div class="contact-grid-agile-w31">
 							<i class="fa fa-map-marker" aria-hidden="true"></i>
 							<h4>Address</h4>
-							<p>Dream Alauddin Tower,Jashore, Bangladesh.</p>
+							<p>{{setting.address}}</p>
 						</div>
 					</div>
 					<div class="col-md-4 contact-grid-agile-w3">
 						<div class="contact-grid-agile-w32">
 							<i class="fa fa-phone" aria-hidden="true"></i>
 							<h4>Call Us</h4>
-							</a><p><a href="tel:0421-61737">0421-61737</a></p>
+							</a><p><a href="tel:{{setting.phone}}">{{setting.phone}}</a></p>
 						</div>
 					</div>
 					<div class="col-md-4 contact-grid-agile-w3">
 						<div class="contact-grid-agile-w33">
 							<i class="fa fa-envelope-o" aria-hidden="true"></i>
 							<h4>Email</h4>
-							<p><a href="mailto:support@artfort.com.bd">support@artfort.com.bd</a></p>
+							<p><a href="mailto:{{setting.email}}">{{setting.email}}</a></p>
 						</div>
 					</div>
 					<div class="clearfix"> </div>
@@ -51,27 +51,27 @@
 							<div class="mail-agileits-w3layouts">
 								<i class="fa fa-volume-control-phone" aria-hidden="true"></i>
 								<div class="contact-right">
-									<p>Telephone </p><span><a href="tel:0421-61737">0421-61737</a></span>
+									<p>Telephone </p><span><a href="tel:{{setting.phone}}">{{setting.phone}}</a></span>
 								</div>
 								<div class="clearfix"> </div>
 							</div>
 							<div class="mail-agileits-w3layouts">
 								<i class="fa fa-envelope-o" aria-hidden="true"></i>
 								<div class="contact-right">
-									<p>Mail </p><a href="mailto:support@artfort.com.bd">support@artfort.com.bd</a>
+									<p>Mail </p><a href="mailto:{{setting.email}}">{{setting.email}}</a>
 								</div>
 								<div class="clearfix"> </div>
 							</div>
 							<div class="mail-agileits-w3layouts">
 								<i class="fa fa-map-marker" aria-hidden="true"></i>
 								<div class="contact-right">
-									<p>Location</p><span>Dream Alauddin Tower,Jashore,Bangladesh.</span>
+									<p>Location</p><span>{{setting.address}}</span>
 								</div>
 								<div class="clearfix"> </div>
 							</div>
 							<ul class="social-nav model-3d-0 footer-social w3_agile_social two contact">
 							                              <li class="share">SHARE ON : </li>
-															<li><a href="https://www.facebook.com/artfortclothing" class="facebook">
+															<li><a href="{{setting.facebook}}" class="facebook">
 																  <div class="front"><i class="fa fa-facebook" aria-hidden="true"></i></div>
 																  <div class="back"><i class="fa fa-facebook" aria-hidden="true"></i></div></a></li>
 															<li><a href="#" class="twitter"> 

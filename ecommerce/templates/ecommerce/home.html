@@ -3,168 +3,36 @@
 {% block title %}Artfort{% endblock %}
 {% block header %}{% include 'ecommerce/header.html' %}{% endblock %}
 {% block mainbody %}
-<!-- //banner-top -->
-		<div class="modal fade" id="myModal" tabindex="-1" role="dialog">
-			<div class="modal-dialog">
-				<!-- Modal content-->
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal">&times;</button>
-					</div>
-						<div class="modal-body modal-body-sub_agile">
-						<div class="col-md-8 modal_body_left modal_body_left1">
-						<h3 class="agileinfo_sign">Sign In <span>Now</span></h3>
-									<form action="#" method="post">
-							<div class="styled-input agile-styled-input-top">
-								<input type="text" name="Name" required="">
-								<label>Name</label>
-								<span></span>
-							</div>
-							<div class="styled-input">
-								<input type="email" name="Email" required=""> 
-								<label>Email</label>
-								<span></span>
-							</div> 
-							<input type="submit" value="Sign In">
-						</form>
-						  <ul class="social-nav model-3d-0 footer-social w3_agile_social top_agile_third">
-															<li><a href="#" class="facebook">
-																  <div class="front"><i class="fa fa-facebook" aria-hidden="true"></i></div>
-																  <div class="back"><i class="fa fa-facebook" aria-hidden="true"></i></div></a></li>
-															<li><a href="#" class="twitter"> 
-																  <div class="front"><i class="fa fa-twitter" aria-hidden="true"></i></div>
-																  <div class="back"><i class="fa fa-twitter" aria-hidden="true"></i></div></a></li>
-															<li><a href="#" class="instagram">
-																  <div class="front"><i class="fa fa-instagram" aria-hidden="true"></i></div>
-																  <div class="back"><i class="fa fa-instagram" aria-hidden="true"></i></div></a></li>
-															<li><a href="#" class="pinterest">
-																  <div class="front"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
-																  <div class="back"><i class="fa fa-linkedin" aria-hidden="true"></i></div></a></li>
-														</ul>
-														<div class="clearfix"></div>
-														<p><a href="#" data-toggle="modal" data-target="#myModal2" > Don't have an account?</a></p>
-
-						</div>
-						<div class="col-md-4 modal_body_right modal_body_right1">
-							<img src="images/log_pic.jpg" alt=" "/>
-						</div>
-						<div class="clearfix"></div>
-					</div>
-				</div>
-				<!-- //Modal content-->
-			</div>
-		</div>
-<!-- //Modal1 -->
-<!-- Modal2 -->
-		<div class="modal fade" id="myModal2" tabindex="-1" role="dialog">
-			<div class="modal-dialog">
-				<!-- Modal content-->
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal">&times;</button>
-					</div>
-						<div class="modal-body modal-body-sub_agile">
-						<div class="col-md-8 modal_body_left modal_body_left1">
-						<h3 class="agileinfo_sign">Sign Up <span>Now</span></h3>
-						 <form action="#" method="post">
-							<div class="styled-input agile-styled-input-top">
-								<input type="text" name="Name" required="">
-								<label>Name</label>
-								<span></span>
-							</div>
-							<div class="styled-input">
-								<input type="email" name="Email" required=""> 
-								<label>Email</label>
-								<span></span>
-							</div> 
-							<div class="styled-input">
-								<input type="password" name="password" required=""> 
-								<label>Password</label>
-								<span></span>
-							</div> 
-							<div class="styled-input">
-								<input type="password" name="Confirm Password" required=""> 
-								<label>Confirm Password</label>
-								<span></span>
-							</div> 
-							<input type="submit" value="Sign Up">
-						</form>
-						  <ul class="social-nav model-3d-0 footer-social w3_agile_social top_agile_third">
-															<li><a href="#" class="facebook">
-																  <div class="front"><i class="fa fa-facebook" aria-hidden="true"></i></div>
-																  <div class="back"><i class="fa fa-facebook" aria-hidden="true"></i></div></a></li>
-															<li><a href="#" class="twitter"> 
-																  <div class="front"><i class="fa fa-twitter" aria-hidden="true"></i></div>
-																  <div class="back"><i class="fa fa-twitter" aria-hidden="true"></i></div></a></li>
-															<li><a href="#" class="instagram">
-																  <div class="front"><i class="fa fa-instagram" aria-hidden="true"></i></div>
-																  <div class="back"><i class="fa fa-instagram" aria-hidden="true"></i></div></a></li>
-															<li><a href="#" class="pinterest">
-																  <div class="front"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
-																  <div class="back"><i class="fa fa-linkedin" aria-hidden="true"></i></div></a></li>
-														</ul>
-														<div class="clearfix"></div>
-														<p><a href="#">By clicking register, I agree to your terms</a></p>
-
-						</div>
-						<div class="col-md-4 modal_body_right modal_body_right1">
-							<img src="images/log_pic.jpg" alt=" "/>
-						</div>
-						<div class="clearfix"></div>
-					</div>
-				</div>
-				<!-- //Modal content-->
-			</div>
-		</div>
-<!-- //Modal2 -->
-
-<!-- banner -->
 	<div id="myCarousel" class="carousel slide" data-ride="carousel">
 		<!-- Indicators -->
 		<ol class="carousel-indicators">
 			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-			<li data-target="#myCarousel" data-slide-to="1" class=""></li>
-			<li data-target="#myCarousel" data-slide-to="2" class=""></li>
-			<li data-target="#myCarousel" data-slide-to="3" class=""></li>
+			{% for i in rang %}
+			<li data-target="#myCarousel" data-slide-to="{{i}}" class=""></li>
+			{% endfor %}
 		</ol>
 		<div class="carousel-inner" role="listbox">
-			<div class="item active"> 
+			<div class="item active" style="background: url('{{ slide_images.0.ImageUrl }}');"> 
 				<div class="container">
 					<div class="carousel-caption">
-						<h3>The Biggest <span>Sale</span></h3>
-						<p>Special for today</p>
+						<h3>{{slide_images.0.title}} <span>sale</span></h3>
+						<p>{{slide_images.0.desc}}</p>
 						<a class="hvr-outline-out button2" href="#">Shop Now </a>
 					</div>
 				</div>
 			</div>
-			
-			<div class="item item3"> 
+			{% for img in slide_images|slice:"1:" %}
+			<div class="item" style="background: url('{{ img.ImageUrl }}');"> 
 				<div class="container">
 					<div class="carousel-caption">
-						<h3>The Biggest <span>Sale</span></h3>
-						<p>Special for today</p>
+						<h3>{{img.title}}<span>sale</span></h3>
+						<p>{{img.desc}}</p>
 						<a class="hvr-outline-out button2" href="#">Shop Now </a>
 					</div>
 				</div>
 			</div>
-			<div class="item item4"> 
-				<div class="container">
-					<div class="carousel-caption">
-						<h3>Summer <span>Collection</span></h3>
-						<p>New Arrivals On Sale</p>
-						<a class="hvr-outline-out button2" href="#">Shop Now </a>
-					</div>
-				</div>
-			</div>
-			<div class="item item5"> 
-				<div class="container">
-					<div class="carousel-caption">
-						<h3>The Biggest <span>Sale</span></h3>
-						<p>Special for today</p>
-						<a class="hvr-outline-out button2" href="#">Shop Now </a>
-					</div>
-				</div>
-			</div> 
+			{% endfor %}
+ 
 		</div>
 		<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
 			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -182,7 +50,7 @@
             <div class="banner_bottom_agile_info_inner_w3ls">
     	           <div class="col-md-6 wthree_banner_bottom_grid_three_left1 grid">
 						<figure class="effect-roxy">
-							<img src="{% static '' %}images/bottom1.jpeg" alt=" " class="img-responsive" />
+							<img src="{{setting.bannerbottom1.url}}" alt=" " class="img-responsive" />
 							<figcaption>
 								<h3><span>F</span>all Ahead</h3>
 								<p>New Arrivals</p>
@@ -191,7 +59,7 @@
 					</div>
 					 <div class="col-md-6 wthree_banner_bottom_grid_three_left1 grid">
 						<figure class="effect-roxy">
-							<img src="{% static '' %}images/bottom2.jpeg" alt=" " class="img-responsive" />
+							<img src="{{setting.bannerbottom2.url}}" alt=" " class="img-responsive" />
 							<figcaption>
 								<h3><span>F</span>all Ahead</h3>
 								<p>New Arrivals</p>
@@ -205,7 +73,7 @@
 	<!-- schedule-bottom -->
 	<div class="schedule-bottom">
 		<div class="col-md-6 agileinfo_schedule_bottom_left">
-			<img src="{% static '' %}images/mid2.jpeg" alt=" " class="img-responsive" />
+			<img src="{{setting.schedulebottom.url}}" alt=" " class="img-responsive" />
 		</div>
 		<div class="col-md-6 agileits_schedule_bottom_right">
 			<div class="w3ls_schedule_bottom_right_grid">
@@ -242,7 +110,7 @@
 			<a href="#">
 			   <div class="bb-left-agileits-w3layouts-inner grid">
 					<figure class="effect-roxy">
-							<img src="{% static '' %}images/bb1.jpeg" alt=" " class="img-responsive" />
+							<img src="{{setting.trending1.url}}" alt=" " class="img-responsive" />
 							<figcaption>
 								<h3><span>S</span>ale </h3>
 								<p>Upto 55%</p>
@@ -255,7 +123,7 @@
 		      <a href="#">
 		       <div class="bb-middle-agileits-w3layouts grid">
 			           <figure class="effect-roxy">
-							<img src="{% static '' %}images/bottom3.jpg" alt=" " class="img-responsive" />
+							<img src="{{setting.trending2.url}}" alt=" " class="img-responsive" />
 							<figcaption>
 								<h3><span>S</span>ale </h3>
 								<p>Upto 55%</p>
@@ -266,7 +134,7 @@
 				<a href="#">
 		      <div class="bb-middle-agileits-w3layouts forth grid">
 						<figure class="effect-roxy">
-							<img src="{% static '' %}images/bottom4.jpg" alt=" " class="img-responsive">
+							<img src="{{setting.trending3.url}}" alt=" " class="img-responsive">
 							<figcaption>
 								<h3><span>S</span>ale </h3>
 								<p>Upto 65%</p>
@@ -281,11 +149,11 @@
 <!--/grids-->
       <div class="agile_last_double_sectionw3ls">
             <div class="col-md-6 multi-gd-img multi-gd-text ">
-					<a href="#"><img src="{% static '' %}images/bot_1.jpg" alt=" "><h4>Flat <span>50%</span> offer</h4></a>
+					<a href="#"><img src="{{setting.bannerlast1.url}}" alt=" "><h4>Flat <span>50%</span> offer</h4></a>
 					
 			</div>
 			 <div class="col-md-6 multi-gd-img multi-gd-text ">
-					<a href="#"><img src="{% static '' %}images/bot_2.jpg" alt=" "><h4>Flat <span>50%</span> offer</h4></a>
+					<a href="#"><img src="{{setting.bannerlast2.url}}" alt=" "><h4>Flat <span>50%</span> offer</h4></a>
 			</div>
 			<div class="clearfix"></div>
 	   </div>							
